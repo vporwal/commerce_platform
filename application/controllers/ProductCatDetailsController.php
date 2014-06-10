@@ -2,10 +2,15 @@
 
 class ProductCatDetailsController extends CI_Controller {
 	
+	/*public function index_get($groupId, $categoryId) {
+		//$this->CategoryResource->getCategoriesIncludeGroups();
+		$this->load->model('GroupResource');
+		echo json_encode($this->GroupResource->getGroupProducts($groupId));
+	}
+*/
 	public function __construct()
 	{
 		parent::__construct();
-		//$this->load->model('product_category');
 	}
 	
 	/**
@@ -23,21 +28,17 @@ class ProductCatDetailsController extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see http://codeigniter.com/user_guide/general/urls.html
 	 */
-	public function index($categoryId)
+	public function index($groupId)
 	{
+		$data['groupId'] = $groupId;
+		
+		$data = array('groupId' => $groupId);
+		      
 		$this->load->view('templates/header');
-		$this->load->view('pages/product_cat_details');
+		$this->load->view('pages/product_cat_details', $data);
 		$this->load->view('templates/footer');
 	}
-	
-	public function getCategoryDetail() {
-		//$this->product_model->getProducts();
-		//echo "calling this step..";
-		//echo $this->product_model->getProducts();
-		//$this->response($this->product_model->getProducts());
-		//echo json_encode($this->product_category->getAllProductsAndCategories());
-	}
-	
+
 }
 
 /* End of file welcome.php */

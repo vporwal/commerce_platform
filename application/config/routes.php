@@ -39,8 +39,8 @@
 */
 
 $route["Assembler/(:any)"] = "Assembler/index";
-$route["Assembler/getAllProductsAndCategories"] = "Assembler/getAllProductsAndCategories";
 
+$route["ProductCatDetailsController"] = "ProductCatDetailsController/index";
 $route["ProductCatDetailsController/(:any)"] = "ProductCatDetailsController/index/$1";
 $route["HomeController/(:any)"] = "HomeController/index";
 $route["ProductProdDetailsController/(:any)"] = "ProductProdDetailsController/index";
@@ -48,15 +48,22 @@ $route["ContactUsController/(:any)"] = "ContactUsController/index";
 $route["EnquiryCartController/(:any)"] = "EnquiryCartController/index";
 $route["EmailClientController/(:any)"] = "EmailClientController";
 
+$route["category"] = "CategoryResourceController/index";
+$route["categories"] = "CategoryResourceController/index";
 
+$route["group"] = "GroupResourceController/index";
+$route["group/(:any)"] = "GroupResourceController/index/$1";
+$route["groups/(:any)"] = "GroupResourceController/index/$1";
+/*
 $route["ProductTradeMgmtController/(:any)"] = "ProductTradeMgmtController/view";
 $route["ProductInfoController/(:any)"] = "ProductInfoController/view";
 $route["StockMgmtController/(:any)"] = "StockMgmtController/view";
 $route["StockMgmtController"] = "StockMgmtController/view";
 $route["ChallanMgmtController/getProductInfos"] = "ChallanMgmtController/getProductInfos";
-$route["ChallanMgmtController/(:any)"] = "ChallanMgmtController/view";
+$route["ChallanMgmtController/(:any)"] = "ChallanMgmtController/view";*/
 $route["'404_override'"] = "ProductInfoController/view";
-$route['(:any)'] = "ChallanMgmtController/view";
+//$route['(:any)'] = "Assembler/index";
+
 $route['default_controller'] = "Assembler/index";
 
 /* End of file routes.php */

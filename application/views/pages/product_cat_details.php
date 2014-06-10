@@ -1,5 +1,5 @@
 
-<div class="container theme-showcase" ng-controller="CarouselDemoCtrl">			
+<div class="container theme-showcase" ng-controller="CarouselDemoCtrl" ng-init="loadGroups('<?php echo $groupId ?>')">			
 	<div>
 		<div style="margin-top: 58px;"></div>
 		<div style="background-color:white">
@@ -69,16 +69,17 @@
 					<span style="font-size:11px;padding-left:2px;cursor:pointer">Grid</span>
 				</div>	
 			</div>	
-			<div ng-repeat="group in groups">
-				<div>
-					{{group.displayName}}
-				</div>
+			<div>
+				
 
-				<div class="col-md-6 text-center img-thumbnail" ng-mouseout="onMouseOut()" ng-mouseover="onMouseOver($index);" ng-repeat="product in group.products track by $index">
+				<div class="col-md-6 text-center img-thumbnail" 
+					ng-mouseout="onMouseOut()" 
+					ng-mouseover="onMouseOver($index);" 
+					ng-repeat="product in groups track by $index">
 					<!-- show this for List view -->
 					<div class="list_style" style="display:none">
 						<div>
-							<img src="http://roofingsolutions.co.in/images/{{product.img_path}}{{product.img_name}}">
+							<img src="<?php echo base_url(); ?>img/products/{{product.group_id}}/{{product.img_name}}">
 							<!-- <div class="buy-ico"></div> -->
 							<h3>
 								{{product.product_name}}
@@ -87,13 +88,13 @@
 								{{product.prod_short_desc}}
 							</p>
 							<p>Avg. Price (%)</p>							
-							<p style="padding-top:5px;"><a href="<?php echo base_url(); ?>index.php/ProductProdDetailsController/index">View DetailsÂ»</a></p>
+							<p style="padding-top:5px;"><a href="<?php echo base_url(); ?>index.php/ProductProdDetailsController/index">View Details»</a></p>
 						</div>
 					</div>
 					<div class="grid_style" style="display:block" ng-controller="ModalDemoCtrl" >
 						<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
 							<div class="flipper">
-								<div class="front smothIn cursortype" style="background: url(http://roofingsolutions.co.in/images/{{product.img_path}}{{product.img_name}}) 0 0 no-repeat;">										
+								<div class="front smothIn cursortype" style="background: url(<?php echo base_url(); ?>img/products/{{product.group_id}}/{{product.img_name}}) 0 0 no-repeat;">										
 								</div>
 								<div class="back" style="background:#f8f8f8;">
 									<p>{{product.prod_short_desc}}</p>
@@ -103,7 +104,7 @@
 						<div class="overlay_left overlay_text" ng-show="isOptionVisible($index)"><a href="#" style="color:#fff" ng-click="open();">Quick View</a></div>
 						<div class="overlay_right overlay_text" ng-show="isOptionVisible($index)"><a href="#" style="color:#fff">Add to WishList</a></div> 
 						<h2 style="font-size: 20px">{{product.product_name}}</h2>						
-						<p style="padding-top:5px;"><a href="<?php echo base_url(); ?>index.php/ProductProdDetailsController/index">View DetailsÂ»</a></p>
+						<p style="padding-top:5px;"><a href="<?php echo base_url(); ?>index.php/ProductProdDetailsController/index">View Details»</a></p>
 						<p style="padding-top:5px;"><input type="checkbox" ng-click="addToCompare()"></input><span class="compareAdd">Add to compare</span></p>
 
 					</div>

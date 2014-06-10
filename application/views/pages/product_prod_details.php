@@ -41,10 +41,10 @@
 				<p>Availabel in size: xxxxxxxxx</p>
 			</div>
 		</div>	
-		<div ng-controller="TabsDemoCtrl" style="clear:left;padding-top:20px">
+		<div style="clear:left;padding-top:20px">
 			<p class="textheading">PRODUCT SUMMARY OF PRODUCT NAME PRODUCT BRAND</p>	  
 		</div>
-		<div ng-controller="TabsDemoCtrl" style="clear:left;padding-top:20px">
+		<div style="clear:left;padding-top:20px">
 			<p class="textheading">People WHO VIEWED THIS ITEM ALSO VIEWED</p>	  
 			<div class="slider1">
 				<div class="slide"><img src="http://roofingsolutions.co.in/images/home_decor/gems/products/jasper_glorious.jpg"></div>
@@ -54,7 +54,7 @@
 				<div class="slide"><img src="http://roofingsolutions.co.in/images/home_decor/gems/coreal_exotics.jpg"></div>
 			</div>
 		</div>
-		<div ng-controller="TabsDemoCtrl" style="clear:left;padding-top:20px">
+		<div style="clear:left;padding-top:20px">
 			<div class="col-md-6" style="padding-left: 0px;">
 				<p class="textheading">People rating </p>	
 				<div class="tuto-cnt">
@@ -147,7 +147,7 @@
 				</div>
 			</div>
 		</div>
-		<div ng-controller="TabsDemoCtrl" style="clear:left;padding-top:20px">
+		<div style="clear:left;padding-top:20px">
 			<p class="textheading">People Reviews and feedback </p>	
 			<div class="col-md-12" style="padding-left:0px">	
 				<div class="col-md-1" style="padding-left:0px">

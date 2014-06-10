@@ -54,10 +54,9 @@ $db['default']['password'] = 'oMk1k01$';
 $db['default']['database'] = 'ebilling';
 $db['default']['dbdriver'] = 'mysql';
 
-
 $db['ecommtradeing']['hostname'] = 'roofingsolutions.co.in';
-$db['ecommtradeing']['username'] = 'root';
-$db['ecommtradeing']['password'] = '3mQTFVmXJFfE8XLd';
+$db['ecommtradeing']['username'] = 'online_trade';
+$db['ecommtradeing']['password'] = 'sEo8~e09';//'bjVn725$'; //'3mQTFVmXJFfE8XLd';
 $db['ecommtradeing']['database'] = 'online_trade';
 $db['ecommtradeing']['dbdriver'] = 'mysql';
 
